@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+<script>
+	 
+
+
+</script>
+
+
+<title>新增資料</title>
+</head>
+<body>
+	<form action="Certification.process" method='post'>
+		區域: <select id ="area" name="area">
+			<option>All	</option>
+			<option>PULLER</option>
+			<option>FILAMENT</option>
+			<option>ETCH</option>
+			<option>CVD</option>
+			<option>PH</option>
+		</Select> <p>
+		
+		學科: <input type='text' id ='knowledge' name = 'knowledge' /><p>
+		術科: <input type='text' id ='technical' name = 'technical' /> <p>
+		訓練: <input type='text' id ='training' name = 'training' /><p>
+		只訓練不認證 :<input type='checkbox' id='training_only'  name='training_only' >
+ 		</p>		 
+		<input type ='submit' name ='action' value = 'add' /> 
+	</form>
+
+
+</body>
+</html>
