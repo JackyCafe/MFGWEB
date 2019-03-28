@@ -30,7 +30,7 @@
  		request.setAttribute("lists", lists);
 	%>
 
-	<table class="table table-hover" id='report'>
+	<table class="table table-hover table-striped table-bordered table-rwd" id='report'>
 		<thead class="thead-dark">
 			<tr>
 				<th scope="col">筆數</th>
@@ -54,27 +54,27 @@
 
 			<c:forEach var='r' items="${lists }" varStatus="i">
 				<tr>
-					<td scope="row">${i.count}</td>
-					<td scope="row">${r.date1}</td>
-					<td>${r.box}</td>
-					<td>${r.product}</td>
-					<td>${r.reactorLot}</td>
-					<td>${r.lot1}</td>
-					<td>${r.reactorLot2}</td>
-					<td>${r.lot2}</td>
-					<td>${r.reactorLot3}</td>
-					<td>${r.lot3}</td>
-					<td>${r.totalWeight}</td>
-					<td>${r.recorder}</td>
+					<td data-th="筆數">${i.count}</td>
+					<td data-th="日期">${r.date1}</td>
+					<td data-th="箱號">${r.box}</td>
+					<td data-th="產品名稱">${r.product}</td>
+					<td data-th="CVD 批號">${r.reactorLot}</td>
+					<td data-th="袋號">${r.lot1}</td>
+					<td data-th="CVD 批號">${r.reactorLot2}</td>
+					<td data-th="袋號">${r.lot2}</td>
+					<td data-th="CVD 批號">${r.reactorLot3}</td>
+					<td data-th="袋號">${r.lot3}</td>
+					<td data-th="總重">${r.totalWeight}</td>
+					<td data-th="紀錄者">${r.recorder}</td>
 				
 					<c:choose>
 						<c:when test="${r.pullerUse==false}">
-							<td> </td>
-							<td> </td>
+							<td data-th="puller領用"> </td>
+							<td data-th="備註"> </td>
 						</c:when>
 						<c:otherwise>
-							<td> V </td>
-							<td>${r.memo} </td>
+							<td data-th="puller領用"> V </td>
+							<td data-th="備註">${r.memo} </td>
 						</c:otherwise>
 					</c:choose>
 				</tr>
